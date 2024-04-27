@@ -2,13 +2,16 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Minesweeper.TitlePage"
-             Title="TitlePage">
+             Title="TitlePage"
+             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="False"
+             >
     <VerticalStackLayout>
-        <Label Text="MINESWEEPER" FontSize="Header" HorizontalOptions="Center" Margin="30 0"/>
+        <Label Text="MINESWEEPER" FontSize="Header" HorizontalOptions="Center" Margin="30"/>
         <VerticalStackLayout Spacing="30" MaximumWidthRequest="350">
-            <Button Text="Diffuculty: Easy"/>
-            <Button Text="Play"/>
-            <Button Text="Highscores"/>
+            <Button x:Name="DiffucultyButton" Text="Diffuculty: Easy" Clicked="OnDiffucultyButtonClick"/>
+            <Button x:Name="PlayButton" Text="Play" Clicked="OnPlayButtonClick"/>
+            <Button x:Name="HighscoresButton" Text="Highscores" Clicked="OnHighscoresButtonClick"/>
         </VerticalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

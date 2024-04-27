@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Minesweeper.GameplayFlyoutMenu"
+             Title="GameplayFlyoutMenu"
+             >
+    <VerticalStackLayout>
+        <Button x:Name="DiffucultyButton" Text="Diffuculty: Easy" Clicked="OnDiffucultyButtonClick"/>
+        <Button x:Name="RestartButton" x:FieldModifier="Public" Text="Restart Game"/>
+        <Button x:Name="MenuReturnButton" x:FieldModifier="Public" Text="Main Menu"/>
+    </VerticalStackLayout>
+</ContentPage>

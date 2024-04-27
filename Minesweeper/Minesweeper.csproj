@@ -63,6 +63,18 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="GameplayFlyoutLayout.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="GameplayFlyoutMenu.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="GameplayMainPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="HighscoresPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="TitlePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
