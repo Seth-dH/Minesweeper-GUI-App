@@ -6,10 +6,5 @@
              Title="GameplayFlyoutLayout"
             FlyoutLayoutBehavior="Popover"
             >
-    <FlyoutPage.Flyout>
-        <local:GameplayFlyoutMenu x:Name="FlyoutMenu" />    
-    </FlyoutPage.Flyout>
-    <FlyoutPage.Detail>
-        <local:GameplayMainPage x:Name="DetailPage" />
-    </FlyoutPage.Detail>
+    
 </FlyoutPage>

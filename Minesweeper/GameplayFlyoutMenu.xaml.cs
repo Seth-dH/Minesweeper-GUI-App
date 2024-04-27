@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 namespace Minesweeper;
 
 public partial class GameplayFlyoutMenu : ContentPage
@@ -5,7 +7,7 @@ public partial class GameplayFlyoutMenu : ContentPage
 	public GameplayFlyoutMenu()
 	{
 		InitializeComponent();
-	}
+    }
 
     public void OnDiffucultyButtonClick(object sender, EventArgs e)
     {
@@ -29,5 +31,4 @@ public partial class GameplayFlyoutMenu : ContentPage
                 break;
         }
     }
-
 }

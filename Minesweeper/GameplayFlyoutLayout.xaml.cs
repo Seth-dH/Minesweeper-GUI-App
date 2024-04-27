@@ -1,22 +1,50 @@
+using System.Diagnostics;
+
 namespace Minesweeper;
 
 public partial class GameplayFlyoutLayout : FlyoutPage
 {
-	public GameplayFlyoutLayout()
+	private GameplayFlyoutMenu flyoutMenu;
+	private GameplayMainPage detailsPage;
+
+    public GameplayFlyoutLayout()
 	{
 		InitializeComponent();
-		FlyoutMenu.RestartButton.Clicked += RestartButtonClicked;
-		FlyoutMenu.MenuReturnButton.Clicked += MenuButtonClicked;
+
+        flyoutMenu = new GameplayFlyoutMenu();
+        flyoutMenu.RestartButton.Clicked += RestartButtonClicked;
+        flyoutMenu.MenuReturnButton.Clicked += MainMenuButtonClicked;
+        flyoutMenu.BackButton.Clicked += BackButtonClicked;
+		Flyout = flyoutMenu;
+
+        detailsPage = new GameplayMainPage();
+        detailsPage.MenuButton.Clicked += FlyoutMenuButtonClicked;
+		Detail = detailsPage;
 
 		IsPresented = false;
-    }
-
+	}
     private void RestartButtonClicked(object sender, EventArgs e)
 	{
-		Detail = new GameplayMainPage();
+        detailsPage = new GameplayMainPage();
+        detailsPage.MenuButton.Clicked += FlyoutMenuButtonClicked;
+
+		Detail = detailsPage;
+
+		IsPresented = false;
 	}
-	private void MenuButtonClicked(object sender, EventArgs e)
+
+	private void FlyoutMenuButtonClicked(object sender, EventArgs e)
 	{
-		
+		IsPresented = true;
+    }
+
+	private void MainMenuButtonClicked(object sender, EventArgs e)
+	{
+		Navigation.PopAsync();
 	}
+
+	public void BackButtonClicked(object sender, EventArgs e)
+	{
+		IsPresented = false;
+    }
 }

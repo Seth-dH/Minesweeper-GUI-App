@@ -8,5 +8,6 @@
         <Button x:Name="DiffucultyButton" Text="Diffuculty: Easy" Clicked="OnDiffucultyButtonClick"/>
         <Button x:Name="RestartButton" x:FieldModifier="Public" Text="Restart Game"/>
         <Button x:Name="MenuReturnButton" x:FieldModifier="Public" Text="Main Menu"/>
+        <Button x:Name="BackButton" x:FieldModifier="Public" Text="Back"/>
     </VerticalStackLayout>
 </ContentPage>

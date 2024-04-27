@@ -7,7 +7,10 @@
              NavigationPage.HasNavigationBar="False"
              >
     <VerticalStackLayout>
-        <Label Text="Hello There" FontSize="Header" HorizontalOptions="Center"/>
+        <HorizontalStackLayout>
+            <Button x:Name="MenuButton" x:FieldModifier="Public" Text="Menu"/>
+            <Label Text="Hello There" FontSize="Header" HorizontalOptions="Center"/>
+        </HorizontalStackLayout>
         <Button x:Name="CounterButton" Text="Click Me!" Clicked="CounterButton_Clicked"/>
     </VerticalStackLayout>
 </ContentPage>
