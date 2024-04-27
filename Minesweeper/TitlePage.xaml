@@ -4,12 +4,11 @@
              x:Class="Minesweeper.TitlePage"
              Title="TitlePage">
     <VerticalStackLayout>
-        <Label 
-            Text="MINESWEEPER"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <Button Text="Diffuculty: Easy"/>
-        <Button Text="Play"/>
-        <Button Text="Scores"/>
+        <Label Text="MINESWEEPER" FontSize="Header" HorizontalOptions="Center" Margin="30 0"/>
+        <VerticalStackLayout Spacing="30" MaximumWidthRequest="350">
+            <Button Text="Diffuculty: Easy"/>
+            <Button Text="Play"/>
+            <Button Text="Highscores"/>
+        </VerticalStackLayout>
     </VerticalStackLayout>
 </ContentPage>
