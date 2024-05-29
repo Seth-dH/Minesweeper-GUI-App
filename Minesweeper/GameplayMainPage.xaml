@@ -6,11 +6,37 @@
              NavigationPage.HasBackButton="False"
              NavigationPage.HasNavigationBar="False"
              >
-    <VerticalStackLayout>
-        <HorizontalStackLayout>
-            <Button x:Name="MenuButton" x:FieldModifier="Public" Text="Menu"/>
-            <Label Text="Hello There" FontSize="Header" HorizontalOptions="Center"/>
-        </HorizontalStackLayout>
-        <Button x:Name="CounterButton" Text="Click Me!" Clicked="CounterButton_Clicked"/>
-    </VerticalStackLayout>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" x:Name="BannerGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="80"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="MenuButton" x:FieldModifier="Public" Grid.Column="0" Margin="5" Text="Menu"/>
+            <Label x:Name="BombsLeftLabel" Grid.Column="1" Text="00" Style="{StaticResource BannerText}"/>
+            <HorizontalStackLayout Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center" Spacing="10">
+                <Button x:Name="FLagButton" Text="Flag" WidthRequest="70" HeightRequest="70"/>
+                <Button x:Name="BombButton" Text="Bomb" WidthRequest="70" HeightRequest="70"/>
+            </HorizontalStackLayout>
+            <Label x:Name="TimeElaspedLabel" Grid.Column="3" Text="00:00:00" Style="{StaticResource BannerText}"/>
+        </Grid>
+        <Grid x:Name="MinefeildDisplayGrid"  Grid.Row="1">
+            
+        </Grid>
+    </Grid>
+    
+    <ContentPage.Resources>
+        <Style TargetType="Label" x:Key="BannerText">
+            <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            <Setter Property="VerticalTextAlignment" Value="Center"/>
+        </Style>
+    </ContentPage.Resources>
+        
 </ContentPage>
